@@ -8,19 +8,19 @@ It provides you with the ability to
 
 - To monitor and validate their work and to do the necessary troubleshooting in case of invalid data
 
-
-
 **This repository belongs to the "Trufi - Easier access to public transportation" project run by [Trufi Association](https://www.trufi-association.org/).**
 
 ## Table of Content
 
 - The section [Setting up our mapping tool](#setting-up-our-mapping-tool) shows you how you can make adding bus routes to OpenStreetMap easier for your mapping team.
 
-- The section [Setting up our monitoring tool](setting-up-our-monitoring-tool) shows you how you can monitor the progress of your mapping team and to troubleshoot errors.
+- The section [Setting up our monitoring tool](#setting-up-our-monitoring-tool) shows you how you can monitor the progress of your mapping team and to troubleshoot errors.
 
 # Setting up our mapping tool
 
-This repository contains the necessary files needed to make bus route mapping in JOSM even better. It does not contain JOSM itself but you can download JOSM for Linux, Mac or Windows from [here](https://josm.openstreetmap.de).
+Our mapping tool is actually a configuration file which simplifies the [JOSM editor](https://josm.openstreetmap.de) for our purpose. JOSM is complicated so we will show you how to tweak the configuration file to make it easier for your mapping team to [add bus routes to OSM via JOSM](https://github.com/trufi-association/trufi_documentation/blob/master/mapping-routes/mapping-routes.md).
+
+This document does not explain how to [set up JOSM](https://github.com/trufi-association/trufi_documentation/blob/master/installing-josm-on-linux/installing-josm-linux.md) nor to [link it to your OSM account](https://github.com/trufi-association/trufi_documentation/blob/master/oauth-josm/oauth-josm.md). The hyperlinks will point you to the respective tutorials for that.
 
 ![](img/routemapping-look.png)
 
@@ -28,19 +28,9 @@ This repository contains the necessary files needed to make bus route mapping in
 > 
 > JOSM is an extensible editor for [OpenStreetMap](https://welcome.openstreetmap.org/what-is-openstreetmap/). OpenStreetMap itself is a project to create a free and editable map for anyone by anyone. JOSM is a highly advantage tool to actually contribute to OSM by letting you add objects that represent real world objects to the database.
 
-The documentation does not explain how to [set up JOSM](https://github.com/ValorNaram/trufi_documentation/blob/master/installing-josm-on-linux/installing-josm-linux.md) nor to [link it to your OSM account](https://github.com/ValorNaram/trufi_documentation/blob/master/oauth-josm/oauth-josm.md) but it explains how to tweak JOSM to make it easier to [add bus routes to OSM](https://github.com/ValorNaram/trufi_documentation/blob/master/mapping-routes/mapping-routes.md). JOSM itself is complicated enough so we decided to simplify it for our purpose. Our guidelines will show how do you tweak our tool to suit your needs.
+## Prepare your workplace
 
-## Prequesites
-
-We recommend you to have a (basic) understanding of OpenStreetMap and its tagging schematics. It does not matter, if you ever worked with JOSM - the editor - or not. We have also set up a [documentation on how to set up JOSM and how to actually map bus routes](https://github.com/ValorNaram/trufi_documentation/blob/master/README.md) via JOSM.
-
-## Changing our tool to suit your needs
-
-Before you even start to distribute our tool to your community you need to tweak it to suit the needs of your community.
-
-### Prepare your workplace
-
-1. Juat concentrate on our tutorial. Don't listen to music and do not another unrelevant stuff.
+1. Download the [JOSM editor](https://josm.openstreetmap.de) which is available for Linux, Mac and Windows.
 
 2. Fork this repository
 
@@ -48,7 +38,7 @@ Before you even start to distribute our tool to your community you need to tweak
 
 4. Change into the newly created folder
 
-### Editing `trufi_presets.xml`
+## Editing `trufi_presets.xml`
 
 This is actually the really important part which will also take the most time.
 
@@ -82,7 +72,7 @@ This is actually the really important part which will also take the most time.
       </preset>
       ```
 
-### Preparing preset for production use.
+## Preparing preset for production use.
 
 1. Compress the XML file `trufi_presets.xml` into a zip archive.
 
@@ -96,7 +86,7 @@ This is actually the really important part which will also take the most time.
 
 6. Copy the hotlink of the file into your clipboard.
 
-### Editing `josmconfig-trufi-routes.xml`
+## Editing `josmconfig-trufi-routes.xml`
 
 The XML contains the configuration for JOSM and the plugins to be installed. Editing it is pretty easy because we've done the most work for you.
 
@@ -108,17 +98,17 @@ The XML contains the configuration for JOSM and the plugins to be installed. Edi
    <tag key="url" value="https://github.com/SamuelRioTz/Trufi-Presets/releases/download/v1.0.5/trufi.zip"/>
    ```
 
-3. Change the value `https://github.com/SamuelRioTz/Trufi-Presets/releases/download/v1.0.5/trufi.zip` to the url pointing to the zip file you uploaded into your repository on GitHub by inserting the new value from your clipboard e.g. `https://github.com/ValorNaram/routemapping_josmconfig/raw/master/trufi_presets.zip`
+3. Change the value `https://github.com/SamuelRioTz/Trufi-Presets/releases/download/v1.0.5/trufi.zip` to the url pointing to the zip file you uploaded into your repository on GitHub by inserting the new value from your clipboard e.g. `https://github.com/trufi-association/routemapping_josmconfig/raw/master/trufi_presets.zip`
 
 4. Save your work and close your text editor.
 
 ## Finishing up
 
-Upload all your changes to the forked GitHub repository and follow the tutorial [here](https://github.com/ValorNaram/trufi_documentation/blob/master/installing-mapping-tool/install-bus-routes-mapping-tool.md) in order to activate your customized version of our tool in JOSM. Distribute the customized file `josmconfig-trufi-routes.xml` (not our original one but the one in your forked repo you changed e.g. `https://github.com/username/routemapping_josmconfig/josmconfig-trufi-routes.xml`) and nothing else to your community. Point them also to the tutorial on [how to install your customized version of our tool for mapping bus routes in JOSM](https://github.com/ValorNaram/trufi_documentation/blob/master/installing-mapping-tool/install-bus-routes-mapping-tool.md) so they know what to do. You should also consider pointing them to [our comprehensive guide on using JOSM for mapping bus routes](https://github.com/ValorNaram/trufi_documentation/blob/master/README.md).
-
-
+Upload all your changes to the forked GitHub repository and follow the tutorial [here](https://github.com/trufi-association/trufi_documentation/blob/master/installing-mapping-tool/install-bus-routes-mapping-tool.md) in order to activate your customized version of our tool in JOSM. Distribute the customized file `josmconfig-trufi-routes.xml` (not our original one but the one in your forked repo you changed e.g. `https://github.com/username/routemapping_josmconfig/josmconfig-trufi-routes.xml`) and nothing else to your community. Point them also to the tutorial on [how to install your customized version of our tool for mapping bus routes in JOSM](https://github.com/trufi-association/trufi_documentation/blob/master/installing-mapping-tool/install-bus-routes-mapping-tool.md) so they know what to do. You should also consider pointing them to [our comprehensive guide on using JOSM for mapping bus routes](https://github.com/trufi-association/trufi_documentation/blob/master/README.md).
 
 # Setting up our monitoring tool
+
+Our monitoring tool lets you monitor the progress of your mapping team and lets you troubleshoot errors.
 
 ## Preparing your workspace
 
@@ -142,7 +132,7 @@ Upload all your changes to the forked GitHub repository and follow the tutorial 
 
 ## Modifying our monitoring tool
 
-1. Open the file `index.js` in your favourite text editor and head over to the code piece
+1. Open the file `index.js`  located in the root of the directory in your favourite text editor and head over to the following code piece
    
    ```js
     bounds: {
@@ -195,7 +185,3 @@ The script generates a table you can find in the `README.md` file in your local 
 Now you can close the terminal :)
 
 Then point your mapping team to the README.md file and say them, with this list they can validate their work. You should consider rerunning the script regulary on your computer locally to update the README.md in order to update the monitoring results used by you and your mapping team for troubleshooting. You can also show them how they can run the script themselves so they can trigger updates according to their needs.
-
-
-
-
