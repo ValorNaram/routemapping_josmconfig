@@ -18,9 +18,9 @@ It provides you with the ability to
 
 # Setting up our mapping tool
 
-Our mapping tool is actually a configuration file which simplifies the [JOSM editor](https://josm.openstreetmap.de) for our purpose. JOSM is complicated so we will show you how to tweak the configuration file to make it easier for your mapping team to [add bus routes to OSM via JOSM](https://github.com/trufi-association/trufi_documentation/blob/master/mapping-routes/mapping-routes.md).
+Our mapping tool is actually a configuration file which simplifies the [JOSM editor](https://josm.openstreetmap.de) for our purpose. JOSM is complicated so we will show you how to tweak the configuration file to make it easier for your mapping team to [add bus routes to OSM via JOSM](https://mapping-bus-routes.readthedocs.io/en/master/mapping-routes/).
 
-This document does not explain how to [set up JOSM](https://github.com/trufi-association/trufi_documentation/blob/master/installing-josm-on-linux/installing-josm-linux.md) nor to [link it to your OSM account](https://github.com/trufi-association/trufi_documentation/blob/master/oauth-josm/oauth-josm.md). The hyperlinks will point you to the respective tutorials for that.
+This document does not explain how to [set up JOSM](https://mapping-bus-routes.readthedocs.io/en/master/installing-josm-on-linux/) nor to [link it to your OSM account](https://mapping-bus-routes.readthedocs.io/en/master/oauth-josm/). The hyperlinks will point you to the respective tutorials for that.
 
 ![](img/routemapping-look.png)
 
@@ -104,7 +104,7 @@ The XML contains the configuration for JOSM and the plugins to be installed. Edi
 
 ## Finishing up
 
-Upload all your changes to the forked GitHub repository and follow the tutorial [here](https://github.com/trufi-association/trufi_documentation/blob/master/installing-mapping-tool/install-bus-routes-mapping-tool.md) in order to activate your customized version of our tool in JOSM. Distribute the customized file `josmconfig-trufi-routes.xml` (not our original one but the one in your forked repo you changed e.g. `https://github.com/username/routemapping_josmconfig/josmconfig-trufi-routes.xml`) and nothing else to your community. Point them also to the tutorial on [how to install your customized version of our tool for mapping bus routes in JOSM](https://github.com/trufi-association/trufi_documentation/blob/master/installing-mapping-tool/install-bus-routes-mapping-tool.md) so they know what to do. You should also consider pointing them to [our comprehensive guide on using JOSM for mapping bus routes](https://github.com/trufi-association/trufi_documentation/blob/master/README.md).
+Upload all your changes to the forked GitHub repository and follow the tutorial [here](https://mapping-bus-routes.readthedocs.io/en/master/installing-mapping-tool/) in order to activate your customized version of our tool in JOSM. Distribute the customized file `josmconfig-trufi-routes.xml` (not our original one but the one in your forked repo you changed e.g. `https://github.com/username/routemapping_josmconfig/josmconfig-trufi-routes.xml`) and nothing else to your community. Point them also to the tutorial on [how to install your customized version of our tool for mapping bus routes in JOSM](https://mapping-bus-routes.readthedocs.io/en/master/installing-mapping-tool/) so they know what to do. You should also consider pointing them to [our comprehensive guide on using JOSM for mapping bus routes](https://mapping-bus-routes.readthedocs.io/en/master/).
 
 # Setting up our monitoring tool
 
